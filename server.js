@@ -16,7 +16,7 @@ const data = {
 app.get("/mocks", async (req, res) => {
 	const { q, limit, page } = req.query
 	let results;
-	if(q) results = data.docs.filter(x => x.type === "hotel")
+	if(q) results = data.docs.filter(x => x.type === q)
 	else results = data.docs
 
     const pageNumber = Number(page) || 1

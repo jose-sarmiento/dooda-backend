@@ -50,8 +50,14 @@ const seed = async () => {
 	const farms = await search("farm", "farm");
 	const pools = await search("pool", "pool");
 	const beaches = await search("beach", "beach");
+	const cabins = await search("cabin", "cabin");
+	const domes = await search("dome", "dome");
+	const offbeats = await search("offbeat", "offbeat");
+	const islands = await search("island", "island");
+	const treehouses = await search("treehouse", "treehouse");
 
-	data.docs = [...hotels, ...houses, ...farms, ...pools, ...beaches];
+	data.docs = [...hotels, ...houses, ...farms, ...pools, ...beaches, ...cabins, ...domes, 
+	...offbeats, ...islands, ...treehouses];
 };
 
 const search = async (q, name) => {

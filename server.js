@@ -51,13 +51,13 @@ const seed = async () => {
 	const pools = await search("pool", "pool");
 	const beaches = await search("beach", "beach");
 	const cabins = await search("cabin", "cabin");
-	const domes = await search("dome", "dome");
-	const offbeats = await search("offbeat", "offbeat");
-	const islands = await search("island", "island");
+	const campers = await search("campers", "camper");
+	const islands = await search("islands", "island");
 	const treehouses = await search("treehouse", "treehouse");
+	const houseboats = await search("houseboats", "houseboat");
 
-	data.docs = [...hotels, ...houses, ...farms, ...pools, ...beaches, ...cabins, ...domes, 
-	...offbeats, ...islands, ...treehouses];
+	data.docs = [...hotels, ...houses, ...farms, ...pools, ...beaches, ...cabins, 
+	...campers, ...islands, ...treehouses, ...houseboats];
 };
 
 const search = async (q, name) => {
